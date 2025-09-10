@@ -1,0 +1,294 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: radial-gradient(circle at top, #5a0f4d, #2a0d36 60%, #0d0b1a);
+  color: #f8e9ff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; width: 100%; top: 0; left: 0;
+  background: transparent;
+  padding: 0.8rem 1.5rem;
+  z-index: 1000;
+  display: flex; justify-content: center;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.navbar-scrolled {
+  background: rgba(40, 20, 60, 0.85);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+.container {
+  width: 100%; 
+  max-width: 1100px;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+.logo {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 8px #ffd700, 0 0 14px rgba(255, 215, 0, 0.6);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 1.5rem; }
+
+.nav-links li a {
+  color: #ffeefc; 
+  font-weight: 600; 
+  font-size: 0.95rem;
+  text-decoration: none; 
+  transition: color 0.3s ease;
+}
+.nav-links li a:hover { 
+  color: #ffd700; 
+  text-shadow: 0 0 6px #ffd700; }
+
+nav a {
+  font-family: 'Cinzel', serif;
+  color: #fceaff;
+  text-decoration: none;
+  margin: 1px;
+
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+  color: #ffd700;
+}
+
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("hero-bg.jpeg") no-repeat center/cover;
+  display: flex; justify-content: center; align-items: center;
+  text-align: center; padding-top: 70px;
+  position: relative;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(20, 5, 30, 0.6); z-index: 0;
+}
+.hero-content {
+  position: relative; color: #ffd700; max-width: 650px; z-index: 1;
+}
+.hero-content h1 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2.5rem; margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px #ffd700, 0 0 25px rgba(255, 215, 0, 0.8);
+}
+.hero-content p {
+  font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 500;
+  color: #fff3d4; text-shadow: 0 0 6px rgba(255, 215, 0, 0.6);
+}
+
+/* Tombol */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffcc33, #ff9900);
+  color: #3a0a2a;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 12px #ffd700, 0 0 20px rgba(255, 165, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ff9900, #ffcc33);
+  box-shadow: 0 0 20px #ffd700, 0 0 30px rgba(255, 215, 0, 0.9);
+  transform: translateY(-3px);
+}
+
+/* Main Content */
+.main-content {
+  background: url("hero-bg.jpeg") no-repeat center/cover;
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+.poster-bg {
+  background: url("marsudcup2.jpeg") no-repeat center top;
+  background-size: 100px auto;  /* atur kecil-besarnya poster */
+  background-attachment: fixed;
+}
+
+/* Sections */
+.section {
+  max-width: 900px; margin: 3rem auto; padding: 2.5rem 1.5rem;
+  background: rgba(255, 240, 200, 0.07);
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+  color: #fbeedb; text-align: center;
+}
+.section h2 {
+  font-family: "Cinzel Decorative", serif;
+  font-size: 2rem; margin-bottom: 1.2rem;
+  color: #ffd700; text-shadow: 0 0 10px #ffd700;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: rgba(40, 15, 50, 0.7);
+  border-radius: 14px; padding: 1.5rem 1rem;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff5d9; text-align: center;
+}
+.card i {
+  margin-bottom: 0.8rem; font-size: 2rem;
+  color: #ffd700; text-shadow: 0 0 8px #ffd700;
+}
+.card h3 {
+  font-size: 1.2rem; margin-bottom: 0.5rem; color: #ffebad;
+}
+.card p { font-size: 0.95rem; color: #e7d2ff; }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 22px rgba(255, 215, 0, 0.35);
+}
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.gallery img, .poster { width: 100%; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: transform 0.3s ease; }
+.gallery img:hover, .poster:hover { transform: scale(1.04); }
+
+/* Info cards */
+.info-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.2rem; margin-top: 1.2rem; }
+.info-card {
+  text-decoration: none; border-radius: 14px; overflow: hidden;
+  width: 200px; height: 200px; transition: transform 0.3s ease;
+}
+.info-card:hover { transform: scale(1.05); }
+.card-content {
+  width: 100%; height: 100%; background-size: cover; background-position: center;
+  display: flex; justify-content: center; align-items: center;
+}
+.card-content span {
+  color: white; font-weight: 700; font-size: 1.1rem;
+  text-align: center; text-shadow: 0 0 6px rgba(255, 215, 0, 0.9);
+}
+
+/* Countdown */
+.countdown-section {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 18px; padding: 30px 15px;
+  text-align: center; color: white;
+  max-width: 650px; margin: 2rem auto;
+  backdrop-filter: blur(8px);
+}
+.countdown-container h2 { font-size: 1.4rem; margin-bottom: 15px; font-weight: 600; }
+#countdown-timer { display: flex; justify-content: center; gap: 20px; font-weight: 700; font-size: 2rem; }
+.time-segment { display: flex; flex-direction: column; align-items: center; }
+.time-segment .label { font-size: 0.8rem; font-weight: 500; margin-top: 3px; }
+
+/* Footer */
+footer {
+  background: #1a0825; padding: 1.5rem 1rem;
+  text-align: center; color: #d6c3ff;
+  box-shadow: inset 0 1px 6px rgba(255, 215, 0, 0.15);
+  font-size: 0.9rem;
+}
+.social-icons { margin: 1rem 0; display: flex; justify-content: center; gap: 1.2rem; }
+
+.event-info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 20px;
+  margin: 80px auto 40px auto;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+.event-info-container h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: #FFD700;
+  text-shadow: 0 0 10px #FFD700;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.event-details p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+.event-details .label {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.event-icon img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.logo-section {
+  display: flex;
+  flex-direction: column; /* susun vertikal */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* biar pas di tengah layar */
+}
+
+.event-logo {
+  width: 600px;  /* langsung tentuin ukuran */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* jarak antara logo dan tulisan */
+}
+
+.brand-logos img {
+  width: 60px;
+  height: auto;
+}
+
+/* === FIX LOGO SECTION === */
+body {
+  background: url("iyakli.jpeg") no-repeat center/cover !important;
+  background-attachment: fixed !important;
+  background-color: transparent !important; /* ilangin ungu sisa */
+}
